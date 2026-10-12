@@ -532,7 +532,7 @@
     // =========================================================================
     // PASTIKAN ANDA MEMASUKKAN URL DEPLOYMENT APPS SCRIPT ANDA DI BAWAH INI
     // =========================================================================
-    const SCRIPT_URL = "MASUKKAN_URL_WEBAPP_GOOGLE_APPS_SCRIPT_DI_SINI";
+    const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwgOc4Kd932HP7J2rCopmsXnIwcaq2xKHBhzg5gRJouuAdI4vrju8lscZ8HajXaDBji/exec";
 
     let appState = { anggota: [], simpanan: [], pinjaman: [], cicilan: [], transaksiLain: [], settings: { adminPin: '1234' } };
     let onConfirmYesAction = null;
@@ -608,7 +608,7 @@
     }
 
     function loadData(onReady) {
-      if (!SCRIPT_URL || SCRIPT_URL === "MASUKKAN_URL_WEBAPP_GOOGLE_APPS_SCRIPT_DI_SINI") {
+      if (!SCRIPT_URL || SCRIPT_URL === "https://script.google.com/macros/s/AKfycbwgOc4Kd932HP7J2rCopmsXnIwcaq2xKHBhzg5gRJouuAdI4vrju8lscZ8HajXaDBji/exec") {
           appState = getSampleData();
           setSyncStatus(false, 'Mode Simulasi Lokal');
           if (typeof onReady === 'function') onReady();
@@ -649,7 +649,7 @@
     function saveState(onSuccess) {
       if (sessionStorage.getItem('isLoggedIn') === 'true') renderAllViews();
 
-      if (!SCRIPT_URL || SCRIPT_URL === "MASUKKAN_URL_WEBAPP_GOOGLE_APPS_SCRIPT_DI_SINI") {
+      if (!SCRIPT_URL || SCRIPT_URL === "Mhttps://script.google.com/macros/s/AKfycbwgOc4Kd932HP7J2rCopmsXnIwcaq2xKHBhzg5gRJouuAdI4vrju8lscZ8HajXaDBji/exec") {
           if (typeof onSuccess === 'function') onSuccess();
           return;
       }
